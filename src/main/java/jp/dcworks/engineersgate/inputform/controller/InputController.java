@@ -52,7 +52,6 @@ public class InputController {
 	@PostMapping("input")
 	public String index(@Validated @ModelAttribute RequestInput requestInput,
 			BindingResult result,
-			Model model,
 			RedirectAttributes redirectAttributes) {
 
 		log.info("アカウント作成処理のアクションが呼ばれました。：requestInput={}", requestInput);
