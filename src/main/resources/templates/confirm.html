@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>確認画面</title>
+</head>
+<body bgcolor="#fffff0">
+	<h1>確認画面</h1>
+	<form method="get" th:action="@{/input}" >
+		<b>名前：</b>
+		<br>
+		<span style="color:#0000ff;" th:text="*{requestInput.name}"></span>
+
+		<br><br>
+		<b>問い合わせ内容：</b>
+		<br>
+		<span style="color:#0000ff;" th:utext="${@stringUtil.nl2br(requestInput.body)}"></span>
+
+		<br>
+		<input type="submit" value="入力画面へ">
+	</form>
+</body>
+</html>
