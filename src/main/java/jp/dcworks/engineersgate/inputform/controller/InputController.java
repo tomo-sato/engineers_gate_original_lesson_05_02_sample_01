@@ -68,7 +68,7 @@ public class InputController {
 			return "redirect:/input";
 		}
 
-		// 完了画面へリダイレクト。
+		// 完了画面を表示。
 		return "/confirm";
 	}
 }
